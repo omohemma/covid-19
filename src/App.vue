@@ -1,83 +1,80 @@
 <template>
   <div id="app">
-    <header class="hidden">
+    <header class>
       <!-- Navigation Bar -->
-      <nav class=" justify-evenly  md:justify-around items-center py-6 flex">
-        <a href="#">
-          <img
-            class="h-12 lg:h-16 object-cover"
-            src="./assets/images/Logo.svg"
-            alt="logo"
-          />
-        </a>
-        <div class="block md:hidden">
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path
-              v-if="isOpened === true"
-              fill-rule="evenodd"
-              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-            />
-            <path
-              fill-rule="evenodd"
-              v-else
-              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-            />
-          </svg>
+      <nav class="justify-evenly sm:justify-around items-center py-6 sm:flex">
+        <div class="flex justify-between items-center px-6">
+          <a href="#">
+            <img class="h-12 lg:h-16 object-cover" src="./assets/images/Logo.svg" alt="logo" />
+          </a>
+          <div>
+            <button
+              type="button"
+              class="block text-gray-500 hover:text-white focus:text-white focus:outline-none sm:hidden"
+              @click="isOpened = !isOpened"
+            >
+              <svg class="h-8 w-8 fill-current text-gray-500" viewBox="0 0 24 24">
+                <path
+                  v-if="isOpened === true"
+                  fill-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  v-else
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <div class="hidden md:block">
+        <div v-if="isOpened" class="flex sm:flex-row flex-col my-6 items-center block">
           <a
             href="#overview"
-            class="mr-6 text-md lg:text-lg text-red-400 font-medium inline-flex flex-col items-center"
+            class="mr-6 sm:mt-0 text-md lg:text-lg text-red-400 font-medium inline-flex flex-col items-center"
           >
             Overview
             <!-- <span class="h-2 w-2 bg-red-400 rounded-full"></span> -->
           </a>
           <a
             href="#contagion"
-            class="mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
-            >Contagion</a
-          >
+            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+          >Contagion</a>
           <a
             href="#symptoms"
-            class="mr-6  text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
-            >Symptoms</a
-          >
+            class="mt-4 mr-6 sm:mt-0 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+          >Symptoms</a>
           <a
             href="#prevention"
-            class="mr-6 text-md lg:text-lg  text-gray-700 font-medium hover:text-red-400"
-            >Prevention</a
-          >
+            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+          >Prevention</a>
           <a
             href="#contact"
-            class="mr-6 text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-6 py-3 rounded-full hover:text-white hover:bg-red-500"
-            >Contact</a
-          >
+            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-8 py-2 sm:px-6 sm:py-3 rounded-full hover:text-white hover:bg-red-500"
+          >Contact</a>
         </div>
       </nav>
 
-      <div class="flex  mt-8">
-        <div class="w-1/2 mt-40 ml-16">
-          <div class="max-w-lg mx-auto">
-            <span class="text-md text-red-400 font-semibold"
-              >COVID-19 Alert</span
-            >
-            <h1 class="mt-1 text-4xl text-gray-800 leading-9">
-              Stay at Home quarantine To stop Corona virus
-            </h1>
+      <div class="flex sm:flex-row flex-col-reverse mt-8 px-6">
+        <div class="sm:w-1/2 mt-6 lg:mt-20 xl:mt-40 sm:ml-16">
+          <div class="sm:max-w-lg mx-auto">
+            <span class="text-md text-red-400 font-semibold">COVID-19 Alert</span>
+            <h1
+              class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9"
+            >Stay at Home quarantine To stop Corona virus</h1>
             <p class="leading-loose text-gray-700 mt-3">
               There is no specific medicine to prevent or treat coronavirus
               disease (COVID-19). People may need supportive care to .
             </p>
             <a
               href="#contact"
-              class="mt-2 inline-block px-6 py-3 bg-red-500 font-bold rounded-full text-white"
-              >Let us help</a
-            >
+              class="mt-2 inline-block px-4 sm:px-6 py-3 bg-red-500 font-bold rounded-full text-white"
+            >Let us help</a>
           </div>
         </div>
-        <div class="w-1/2">
-          <img src="./assets/images/Illustration 01.svg" alt />
+        <div class="sm:w-1/2 my-auto">
+          <img class src="./assets/images/Illustration 01.svg" alt />
         </div>
       </div>
     </header>
@@ -85,17 +82,13 @@
     <!-- Section One - Responsive -->
     <section id="overview" class="mt-10">
       <div class="sm:flex px-8">
-        <div class="sm:w-1/2 ">
+        <div class="sm:w-1/2">
           <img src="./assets/images/illustration 02.svg" alt />
         </div>
         <div class="sm:w-1/2">
           <div class="max-w-lg lg:mt-24 xl:mt-56 ml-4">
-            <span class=" text-sm sm:text-md text-red-400 font-semibold"
-              >What is COVID-19</span
-            >
-            <h1 class="mt-1  text-2xl sm:text-4xl text-gray-800 leading-9">
-              Coronavirus
-            </h1>
+            <span class="text-sm sm:text-md text-red-400 font-semibold">What is COVID-19</span>
+            <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">Coronavirus</h1>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
               Corona viruses are a type of virus. There are many different
               kinds, and some cause disease. A newly identified type has caused
@@ -106,8 +99,7 @@
             <a
               href="#contagion"
               class="mt-2 inline-block px-4 py-2 sm:px-6 sm:py-3 bg-red-200 font-bold rounded-full text-red-500"
-              >Learn more</a
-            >
+            >Learn more</a>
           </div>
         </div>
       </div>
@@ -126,14 +118,10 @@
 
       <div class="flex justify-evenly flex-wrap my-8 px-12">
         <div
-          class="bg-white rounded-lg shadow-lg max-w-xs p-10 border-b-4 border-red-400 mt-6   card"
+          class="bg-white rounded-lg shadow-lg max-w-xs p-10 border-b-4 border-red-400 mt-6 card"
         >
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-1.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-1.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Air Transmission</h4>
@@ -144,29 +132,21 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6   card ">
+        <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-2.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-2.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Human Contacts</h4>
-            <p class="mt-2 text-gray-700 font-light text-sm">
-              Washing your hands is one of thesimplest ways you can protect
-            </p>
+            <p
+              class="mt-2 text-gray-700 font-light text-sm"
+            >Washing your hands is one of thesimplest ways you can protect</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow-lg max-w-xs p-10  mt-6   card">
+        <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-3.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-3.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Containted Objects</h4>
@@ -180,7 +160,7 @@
     </div>
 
     <!-- Symptoms -Responsive -->
-    <section id="symptoms" class=" mt-24">
+    <section id="symptoms" class="mt-24">
       <div class="mx-auto max-w-xl text-center">
         <span class="text-md text-red-400 font-semibold">COVID-19</span>
         <h1 class="mt-1 text-xl text-gray-800 leading-6">Symptoms</h1>
@@ -191,13 +171,13 @@
         </p>
       </div>
 
-      <div class=" sm:max-w-2xl px-6 mx-auto">
-        <img src="./assets/images/illustration 03.svg" alt="" srcset="" />
+      <div class="sm:max-w-2xl px-6 mx-auto">
+        <img src="./assets/images/illustration 03.svg" alt srcset />
       </div>
     </section>
 
     <!-- What we should do -Responsive -->
-    <section id="prevention" class=" mt-24 px-6">
+    <section id="prevention" class="mt-24 px-6">
       <!-- Heading -->
       <div class="mx-auto max-w-xl text-center">
         <span class="text-md text-red-400 font-semibold">COVID-19</span>
@@ -209,15 +189,11 @@
       </div>
 
       <!-- One -->
-      <div class="flex flex-col flex-col-reverse sm:flex-row mt-10 ">
-        <div class="sm:w-1/2 ">
+      <div class="flex flex-col flex-col-reverse sm:flex-row mt-10">
+        <div class="sm:w-1/2">
           <div class="sm:max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900 "
-            >
-              <span class=" text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >01</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">01</span>
               Wear mask
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -229,31 +205,19 @@
           </div>
         </div>
         <div class="sm:w-1/2">
-          <img
-            class=" h-96  mx-auto"
-            src="./assets/images/Mask girl.svg"
-            alt=""
-          />
+          <img class="h-96 mx-auto" src="./assets/images/Mask girl.svg" alt />
         </div>
       </div>
 
       <!-- Two -->
       <div class="flex flex-col sm:flex-row mt-10">
         <div class="sm:w-1/2">
-          <img
-            class=" h-96 mx-auto"
-            src="./assets/images/Mask girl 02.svg"
-            alt=""
-          />
+          <img class="h-96 mx-auto" src="./assets/images/Mask girl 02.svg" alt />
         </div>
-        <div class="sm:w-1/2 ">
+        <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900 "
-            >
-              <span class=" text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >02</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">02</span>
               Wash Your Hands
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -268,15 +232,11 @@
       </div>
 
       <!-- Three -->
-      <div class="flex  flex-col-reverse sm:flex-row mt-10">
-        <div class="sm:w-1/2 ">
+      <div class="flex flex-col-reverse sm:flex-row mt-10">
+        <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900 "
-            >
-              <span class=" text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >03</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">03</span>
               Use Nose - Rag
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -288,23 +248,19 @@
           </div>
         </div>
         <div class="sm:w-1/2">
-          <img class=" h-96 mx-auto" src="./assets/images/Mask 03.svg" alt="" />
+          <img class="h-96 mx-auto" src="./assets/images/mask 04.svg" alt />
         </div>
       </div>
 
       <!-- Four -->
       <div class="flex flex-col sm:flex-row mt-10">
         <div class="sm:w-1/2">
-          <img class=" h-96 mx-auto" src="./assets/images/mask 04.svg" alt="" />
+          <img class="h-96 mx-auto" src="./assets/images/Mask 03.svg" alt />
         </div>
-        <div class="sm:w-1/2 ">
+        <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900  "
-            >
-              <span class=" text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >04</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">04</span>
               Avoid Contacts
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -320,29 +276,21 @@
 
     <!-- Contact - Responsive -->
     <section id="contact" class="mt-10">
-      <div class=" px-1 sm:max-w-md mx-auto">
-        <h3
-          class="text-2xl sm:text-3xl text-blue-900 text-center tracking-tight"
-        >
-          Have Question in mind ? <br />
-          Let us help you
+      <div class="px-1 sm:max-w-md mx-auto">
+        <h3 class="text-2xl sm:text-3xl text-blue-900 text-center tracking-tight">
+          Have Question in mind ?
+          <br />Let us help you
         </h3>
 
-        <form action="" class="mt-6">
+        <form action class="mt-6">
           <div
             class="flex h-16 border-gray-100 border-2 rounded-full justify-around items-center shadow-lg"
           >
-            <input
-              type="text"
-              class="transparent focus:outline-none"
-              placeholder="Email Address"
-            />
+            <input type="text" class="transparent focus:outline-none" placeholder="Email Address" />
 
             <button
-              class="h-12 px-6 sm:px-12 bg-red-500 text-white rounded-full focus:outline-none hover:bg-red-400 "
-            >
-              Send
-            </button>
+              class="h-12 px-6 sm:px-12 bg-red-500 text-white rounded-full focus:outline-none hover:bg-red-400"
+            >Send</button>
           </div>
         </form>
       </div>
@@ -351,17 +299,11 @@
     <!-- Footer - Responsive -->
     <footer id="footer" class="mt-10">
       <div class="flex flex-col sm:flex-row justify-around items-center">
-        <img class="h-12" src="./assets/images/Logo.svg" alt="" />
-        <div class=" inline-flex flex-wrap justify-center mt-4">
-          <a href="#overview" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Overview</a
-          >
-          <a href="#symptoms" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Symptopms</a
-          >
-          <a href="#prevention" class=" mx-2 sm:mr-6 hover:text-red-600"
-            >Prevention</a
-          >
+        <img class="h-12" src="./assets/images/Logo.svg" alt />
+        <div class="inline-flex flex-wrap justify-center mt-4">
+          <a href="#overview" class="mx-2 sm:mr-6 hover:text-red-600">Overview</a>
+          <a href="#symptoms" class="mx-2 sm:mr-6 hover:text-red-600">Symptopms</a>
+          <a href="#prevention" class="mx-2 sm:mr-6 hover:text-red-600">Prevention</a>
           <a href="#" class="mx-2 sm:mr-6 hover:text-red-600">Treatment</a>
         </div>
 
@@ -381,8 +323,8 @@
             </svg>
           </a>
 
-          <a class="mr-4" href="#"
-            ><svg
+          <a class="mr-4" href="#">
+            <svg
               width="23"
               height="16"
               viewBox="0 0 23 16"
@@ -429,20 +371,27 @@
       </div>
 
       <div class="text-center my-4 mx-auto">
-        <small class=" text-center text-gray-800 text-md"
-          >2020 @ All rights reserved by pixelspark.co</small
-        >
-        <small class="block text-center text-gray-800 text-md mt-2 "
-          >Designed By
+        <small class="text-center text-gray-800 text-md">2020 @ All rights reserved by pixelspark.co</small>
+        <small class="block text-center text-gray-800 text-md mt-2">
+          Designed By
           <a
-            class=" hover:text-red-600"
+            class="hover:text-red-600"
             target="_blank"
             href="https://www.linkedin.com/in/emmanuel-omololu-696702151/"
-          >
-            Omololu Emmanuel</a
-          ></small
-        >
+          >Omololu Emmanuel</a>
+        </small>
       </div>
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isOpened: false
+    };
+  }
+};
+</script>
+>
