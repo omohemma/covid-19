@@ -11,6 +11,7 @@
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
     "core-js": "^3.6.4",
+    "gsap": "^3.2.6",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
