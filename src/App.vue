@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div v-if="isOpened" class="flex sm:flex-row flex-col my-6 items-center block">
+        <div :class="isOpened === true ? 'block' : 'hidden'" class="flex sm:flex-row flex-col my-6 items-center block">
           <a
             href="#overview"
             class="mr-6 sm:mt-0 text-md lg:text-lg text-red-400 font-medium inline-flex flex-col items-center"
