@@ -3,10 +3,16 @@ import App from "./App.vue";
 import router from "./router";
 import "../src/assets/scss/tailwind.scss";
 import "./registerServiceWorker";
+import VueAnalytics from "vue-analytics";
 
 Vue.config.productionTip = false;
 
+// Configuration VueAnalytics
+Vue.use(VueAnalytics, {
+  id: "UA-229417363",
+});
+
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
