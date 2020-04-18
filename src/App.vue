@@ -463,7 +463,7 @@ import gsap from "gsap";
 export default {
   data() {
     return {
-      isOpened: false,
+      isOpened: false
     };
   },
   methods: {
@@ -476,10 +476,10 @@ export default {
         duration: 1,
         opacity: 1,
         scale: 1,
-        onComplete: done,
+        onComplete: done
       });
-    },
-  },
+    }
+  }
 };
 </script>
 >
