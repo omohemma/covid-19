@@ -10,6 +10,7 @@
           <div>
             <button
               type="button"
+              name="nav-toggle"
               class="block text-gray-500 hover:text-white focus:text-white focus:outline-none sm:hidden"
               @click="isOpened = !isOpened"
             >
@@ -291,6 +292,7 @@
             <input type="text" class="transparent focus:outline-none" placeholder="Email Address" />
 
             <button
+              name="send-email"
               class="h-12 px-6 sm:px-12 bg-red-500 text-white rounded-full focus:outline-none hover:bg-red-400"
             >Send</button>
           </div>
@@ -379,12 +381,14 @@
           <a
             class="hover:text-red-600"
             target="_blank"
+            rel="noopener"
             href="https://dribbble.com/shamimanasrin?ref=uistore.design"
           >Shamima Nasrin</a>
           &amp; Developed By
           <a
             class="hover:text-red-600"
             target="_blank"
+            rel="noopener"
             href="https://www.linkedin.com/in/emmanuel-omololu-696702151/"
           >Emmanuel Omololu</a>
         </small>
