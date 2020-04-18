@@ -85,7 +85,7 @@
             </p>
             <a
               href="#contact"
-              class="mt-2 inline-block px-4 sm:px-6 py-3 bg-red-500 font-bold rounded-full text-white"
+              class="mt-2 inline-block px-4 sm:px-6 py-3 bg-red-500 font-bold rounded-full text-white focus:outline-none hover:bg-red-400"
               >Let us help</a
             >
           </div>
@@ -97,40 +97,39 @@
     </header>
 
     <!-- Section One - Responsive -->
-    <transition appear @before-enter="beforeEnter" @enter="enter" :css="false">
-      <section id="overview" class="mt-10">
-        <div class="sm:flex px-8">
-          <div class="sm:w-1/2">
-            <img src="./assets/images/illustration 02.svg" alt />
-          </div>
-          <div class="sm:w-1/2">
-            <div class="max-w-lg lg:mt-24 xl:mt-56 ml-4">
-              <span class="text-sm sm:text-md text-red-400 font-semibold"
-                >What is COVID-19</span
-              >
-              <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">
-                Coronavirus
-              </h1>
-              <p class="leading-loose text-gray-700 mt-3 text-sm">
-                Corona viruses are a type of virus. There are many different
-                kinds, and some cause disease. A newly identified type has
-                caused a recent outbreak of respiratory illness now called
-                COVID-19.Lauren Sauer, M.S., the director of operations with the
-                Johns Hopkins Office of Critical Event Preparedness and Response
-              </p>
-              <a
-                href="#contagion"
-                class="mt-2 inline-block px-4 py-2 sm:px-6 sm:py-3 bg-red-200 font-bold rounded-full text-red-500"
-                >Learn more</a
-              >
-            </div>
+
+    <section id="overview" class="mt-10">
+      <div class="sm:flex px-8">
+        <div class="sm:w-1/2">
+          <img src="./assets/images/illustration 02.svg" alt />
+        </div>
+        <div class="sm:w-1/2">
+          <div class="max-w-lg lg:mt-24 xl:mt-56 ml-4">
+            <span class="text-sm sm:text-md text-red-400 font-semibold"
+              >What is COVID-19</span
+            >
+            <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">
+              Coronavirus
+            </h1>
+            <p class="leading-loose text-gray-700 mt-3 text-sm">
+              Corona viruses are a type of virus. There are many different
+              kinds, and some cause disease. A newly identified type has caused
+              a recent outbreak of respiratory illness now called
+              COVID-19.Lauren Sauer, M.S., the director of operations with the
+              Johns Hopkins Office of Critical Event Preparedness and Response
+            </p>
+            <a
+              href="#contagion"
+              class="mt-2 inline-block px-4 py-2 sm:px-6 sm:py-3 bg-red-200 font-bold rounded-full text-red-500 focus:outline-none hover:bg-red-100"
+              >Learn more</a
+            >
           </div>
         </div>
-      </section>
-    </transition>
+      </div>
+    </section>
 
     <!-- Section Two - Responsive -->
-    <div id="contagion" class="mt-10">
+    <div id="contagion" class="mt-10 px-6">
       <div class="mx-auto max-w-md text-center">
         <span class="text-md text-red-400 font-semibold">COVID-19</span>
         <h1 class="mt-1 text-xl text-gray-800 leading-6">Contagion</h1>
@@ -141,9 +140,7 @@
       </div>
 
       <div class="flex justify-evenly flex-wrap my-8 px-12">
-        <div
-          class="bg-white rounded-lg shadow-lg max-w-xs p-10 border-b-4 border-red-400 mt-6 card"
-        >
+        <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
             <img
               class="h-48 mx-auto object-cover"
@@ -196,7 +193,7 @@
     </div>
 
     <!-- Symptoms -Responsive -->
-    <section id="symptoms" class="mt-24">
+    <section id="symptoms" class="mt-24 px-6">
       <div class="mx-auto max-w-xl text-center">
         <span class="text-md text-red-400 font-semibold">COVID-19</span>
         <h1 class="mt-1 text-xl text-gray-800 leading-6">Symptoms</h1>
@@ -369,7 +366,7 @@
             >Overview</a
           >
           <a href="#symptoms" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Symptopms</a
+            >Symptoms</a
           >
           <a href="#prevention" class="mx-2 sm:mr-6 hover:text-red-600"
             >Prevention</a
@@ -459,27 +456,12 @@
 </template>
 
 <script>
-import gsap from "gsap";
 export default {
   data() {
     return {
-      isOpened: false
+      isOpened: false,
     };
   },
-  methods: {
-    beforeEnter(el) {
-      el.style.opacity = 0;
-      el.style.transform = "scale(0, 0)";
-    },
-    enter(el, done) {
-      gsap.to(el, {
-        duration: 1,
-        opacity: 1,
-        scale: 1,
-        onComplete: done
-      });
-    }
-  }
 };
 </script>
 >

@@ -13,10 +13,10 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  // @apply border-b-4 border-red-400;
+  transform: scale(1.07);
   transition: ease-in-out 0.5s;
   cursor: pointer;
 }
-
 
 @tailwind utilities;
