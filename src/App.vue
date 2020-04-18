@@ -5,11 +5,7 @@
       <nav class="justify-evenly sm:justify-around items-center py-6 sm:flex">
         <div class="flex justify-between items-center px-6">
           <a href="#">
-            <img
-              class="h-10 lg:h-16 object-cover"
-              src="./assets/images/Logo.svg"
-              alt="logo"
-            />
+            <img class="h-10 lg:h-16 object-cover" src="./assets/images/Logo.svg" alt="logo" />
           </a>
           <div>
             <button
@@ -17,10 +13,7 @@
               class="block text-gray-500 hover:text-white focus:text-white focus:outline-none sm:hidden"
               @click="isOpened = !isOpened"
             >
-              <svg
-                class="h-8 w-8 fill-current text-gray-500"
-                viewBox="0 0 24 24"
-              >
+              <svg class="h-8 w-8 fill-current text-gray-500" viewBox="0 0 24 24">
                 <path
                   v-if="isOpened === true"
                   fill-rule="evenodd"
@@ -50,35 +43,29 @@
           <a
             href="#contagion"
             class="mt-4 sm:mt-0 sm:mr-2 md:mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
-            >Contagion</a
-          >
+          >Contagion</a>
           <a
             href="#symptoms"
             class="mt-4 sm:mr-2 md:mr-6 sm:mt-0 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
-            >Symptoms</a
-          >
+          >Symptoms</a>
           <a
             href="#prevention"
             class="mt-4 sm:mt-0 sm:mr-2 md:mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
-            >Prevention</a
-          >
+          >Prevention</a>
           <a
             href="#contact"
-            class="mt-4 sm:mt-0 sm:mr-2 md:mr-6  text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-8 py-2 sm:px-6 sm:py-3 rounded-full hover:text-white hover:bg-red-500"
-            >Contact</a
-          >
+            class="mt-4 sm:mt-0 sm:mr-2 md:mr-6 text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-8 py-2 sm:px-6 sm:py-3 rounded-full hover:text-white hover:bg-red-500"
+          >Contact</a>
         </div>
       </nav>
 
       <div class="flex sm:flex-row flex-col-reverse mt-8 px-6">
         <div class="sm:w-1/2 mt-6 lg:mt-20 xl:mt-40 sm:ml-16">
           <div class="sm:max-w-lg mx-auto">
-            <span class="text-md text-red-400 font-semibold"
-              >COVID-19 Alert</span
-            >
-            <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">
-              Stay at Home quarantine To stop Corona virus
-            </h1>
+            <span class="text-md text-red-400 font-semibold">COVID-19 Alert</span>
+            <h1
+              class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9"
+            >Stay at Home quarantine To stop Corona virus</h1>
             <p class="leading-loose text-gray-700 mt-3">
               There is no specific medicine to prevent or treat coronavirus
               disease (COVID-19). People may need supportive care to .
@@ -86,8 +73,7 @@
             <a
               href="#contact"
               class="mt-2 inline-block px-4 sm:px-6 py-3 bg-red-500 font-bold rounded-full text-white focus:outline-none hover:bg-red-400"
-              >Let us help</a
-            >
+            >Let us help</a>
           </div>
         </div>
         <div class="sm:w-1/2 my-auto">
@@ -105,12 +91,8 @@
         </div>
         <div class="sm:w-1/2">
           <div class="max-w-lg lg:mt-24 xl:mt-56 ml-4">
-            <span class="text-sm sm:text-md text-red-400 font-semibold"
-              >What is COVID-19</span
-            >
-            <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">
-              Coronavirus
-            </h1>
+            <span class="text-sm sm:text-md text-red-400 font-semibold">What is COVID-19</span>
+            <h1 class="mt-1 text-2xl sm:text-4xl text-gray-800 leading-9">Coronavirus</h1>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
               Corona viruses are a type of virus. There are many different
               kinds, and some cause disease. A newly identified type has caused
@@ -121,8 +103,7 @@
             <a
               href="#contagion"
               class="mt-2 inline-block px-4 py-2 sm:px-6 sm:py-3 bg-red-200 font-bold rounded-full text-red-500 focus:outline-none hover:bg-red-100"
-              >Learn more</a
-            >
+            >Learn more</a>
           </div>
         </div>
       </div>
@@ -142,11 +123,7 @@
       <div class="flex justify-evenly flex-wrap my-8 px-12">
         <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-1.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-1.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Air Transmission</h4>
@@ -159,27 +136,19 @@
 
         <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-2.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-2.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Human Contacts</h4>
-            <p class="mt-2 text-gray-700 font-light text-sm">
-              Washing your hands is one of thesimplest ways you can protect
-            </p>
+            <p
+              class="mt-2 text-gray-700 font-light text-sm"
+            >Washing your hands is one of thesimplest ways you can protect</p>
           </div>
         </div>
 
         <div class="bg-white rounded-lg shadow-lg max-w-xs p-10 mt-6 card">
           <div>
-            <img
-              class="h-48 mx-auto object-cover"
-              src="./assets/images/card-3.svg"
-              alt
-            />
+            <img class="h-48 mx-auto object-cover" src="./assets/images/card-3.svg" alt />
           </div>
           <div class="text-center mt-2">
             <h4 class="text-xl font-meduim">Containted Objects</h4>
@@ -225,12 +194,8 @@
       <div class="flex flex-col flex-col-reverse sm:flex-row mt-10">
         <div class="sm:w-1/2">
           <div class="sm:max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900"
-            >
-              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >01</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">01</span>
               Wear mask
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -249,20 +214,12 @@
       <!-- Two -->
       <div class="flex flex-col sm:flex-row mt-10">
         <div class="sm:w-1/2">
-          <img
-            class="h-96 mx-auto"
-            src="./assets/images/Mask girl 02.svg"
-            alt
-          />
+          <img class="h-96 mx-auto" src="./assets/images/Mask girl 02.svg" alt />
         </div>
         <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900"
-            >
-              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >02</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">02</span>
               Wash Your Hands
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -280,12 +237,8 @@
       <div class="flex flex-col-reverse sm:flex-row mt-10">
         <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900"
-            >
-              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >03</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">03</span>
               Use Nose - Rag
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -308,12 +261,8 @@
         </div>
         <div class="sm:w-1/2">
           <div class="max-w-sm mx-auto sm:mt-24">
-            <h3
-              class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900"
-            >
-              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2"
-                >04</span
-              >
+            <h3 class="mt-1 text-xl sm:text-2xl text-gray-800 leading-9 text-blue-900">
+              <span class="text-red-500 bg-red-200 font-bold rounded-full p-2">04</span>
               Avoid Contacts
             </h3>
             <p class="leading-loose text-gray-700 mt-3 text-sm">
@@ -330,9 +279,7 @@
     <!-- Contact - Responsive -->
     <section id="contact" class="mt-10">
       <div class="px-1 sm:max-w-md mx-auto">
-        <h3
-          class="text-2xl sm:text-3xl text-blue-900 text-center tracking-tight"
-        >
+        <h3 class="text-2xl sm:text-3xl text-blue-900 text-center tracking-tight">
           Have Question in mind ?
           <br />Let us help you
         </h3>
@@ -341,17 +288,11 @@
           <div
             class="flex h-16 border-gray-100 border-2 rounded-full justify-around items-center shadow-lg"
           >
-            <input
-              type="text"
-              class="transparent focus:outline-none"
-              placeholder="Email Address"
-            />
+            <input type="text" class="transparent focus:outline-none" placeholder="Email Address" />
 
             <button
               class="h-12 px-6 sm:px-12 bg-red-500 text-white rounded-full focus:outline-none hover:bg-red-400"
-            >
-              Send
-            </button>
+            >Send</button>
           </div>
         </form>
       </div>
@@ -362,15 +303,9 @@
       <div class="flex flex-col sm:flex-row justify-around items-center">
         <img class="h-12" src="./assets/images/Logo.svg" alt />
         <div class="inline-flex flex-wrap justify-center mt-4">
-          <a href="#overview" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Overview</a
-          >
-          <a href="#symptoms" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Symptoms</a
-          >
-          <a href="#prevention" class="mx-2 sm:mr-6 hover:text-red-600"
-            >Prevention</a
-          >
+          <a href="#overview" class="mx-2 sm:mr-6 hover:text-red-600">Overview</a>
+          <a href="#symptoms" class="mx-2 sm:mr-6 hover:text-red-600">Symptoms</a>
+          <a href="#prevention" class="mx-2 sm:mr-6 hover:text-red-600">Prevention</a>
           <a href="#" class="mx-2 sm:mr-6 hover:text-red-600">Treatment</a>
         </div>
 
@@ -438,17 +373,20 @@
       </div>
 
       <div class="text-center my-4 mx-auto">
-        <small class="text-center text-gray-800 text-md"
-          >2020 @ All rights reserved by pixelspark.co</small
-        >
+        <small class="text-center text-gray-800 text-md">2020 @ All rights reserved by pixelspark.co</small>
         <small class="block text-center text-gray-800 text-md mt-2">
           Designed By
           <a
             class="hover:text-red-600"
             target="_blank"
+            href="https://dribbble.com/shamimanasrin?ref=uistore.design"
+          >Shamima Nasrin</a>
+          &amp; Developed By
+          <a
+            class="hover:text-red-600"
+            target="_blank"
             href="https://www.linkedin.com/in/emmanuel-omololu-696702151/"
-            >Omololu Emmanuel</a
-          >
+          >Emmanuel Omololu</a>
         </small>
       </div>
     </footer>
@@ -457,16 +395,12 @@
       href="#header"
       class="fixed bottom-0 mb-10 mr-4 right-0 h-12 w-12 rounded-full bg-red-400 hover:outline-none focus:outline-none shadow-2xl"
     >
-
-    
       <svg
         class="h-12 w-12 fill-current text-white mx-auto my-auto"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
-        <path
-          d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
-        />
+        <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" />
       </svg>
     </a>
   </div>
@@ -476,9 +410,9 @@
 export default {
   data() {
     return {
-      isOpened: false,
+      isOpened: false
     };
-  },
+  }
 };
 </script>
 >

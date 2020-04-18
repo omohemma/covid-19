@@ -8,9 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: linear-gradient(to right white, rgba(181, 116, 116, 1));
-}
+
 
 .card:hover {
   @apply border-b-4 border-red-400;
