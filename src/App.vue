@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <header class>
+    <header id="header">
       <!-- Navigation Bar -->
       <nav class="justify-evenly sm:justify-around items-center py-6 sm:flex">
         <div class="flex justify-between items-center px-6">
           <a href="#">
             <img
-              class="h-12 lg:h-16 object-cover"
+              class="h-10 lg:h-16 object-cover"
               src="./assets/images/Logo.svg"
               alt="logo"
             />
@@ -42,29 +42,29 @@
         >
           <a
             href="#overview"
-            class="mr-6 sm:mt-0 text-md lg:text-lg text-red-400 font-medium inline-flex flex-col items-center"
+            class="sm:mr-2 md:mr-6 sm:mt-0 text-md lg:text-lg text-gray-700 font-medium inline-flex flex-col items-center"
           >
             Overview
             <!-- <span class="h-2 w-2 bg-red-400 rounded-full"></span> -->
           </a>
           <a
             href="#contagion"
-            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+            class="mt-4 sm:mt-0 sm:mr-2 md:mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
             >Contagion</a
           >
           <a
             href="#symptoms"
-            class="mt-4 mr-6 sm:mt-0 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+            class="mt-4 sm:mr-2 md:mr-6 sm:mt-0 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
             >Symptoms</a
           >
           <a
             href="#prevention"
-            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
+            class="mt-4 sm:mt-0 sm:mr-2 md:mr-6 text-md lg:text-lg text-gray-700 font-medium hover:text-red-400"
             >Prevention</a
           >
           <a
             href="#contact"
-            class="mt-4 sm:mt-0 mr-6 text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-8 py-2 sm:px-6 sm:py-3 rounded-full hover:text-white hover:bg-red-500"
+            class="mt-4 sm:mt-0 sm:mr-2 md:mr-6  text-md lg:text-lg text-gray-700 font-medium border-2 border-red-400 px-8 py-2 sm:px-6 sm:py-3 rounded-full hover:text-white hover:bg-red-500"
             >Contact</a
           >
         </div>
@@ -452,6 +452,23 @@
         </small>
       </div>
     </footer>
+
+    <a
+      href="#header"
+      class="fixed bottom-0 mb-10 mr-4 right-0 h-12 w-12 rounded-full bg-red-400 hover:outline-none focus:outline-none shadow-2xl"
+    >
+
+    
+      <svg
+        class="h-12 w-12 fill-current text-white mx-auto my-auto"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
+        />
+      </svg>
+    </a>
   </div>
 </template>
 
